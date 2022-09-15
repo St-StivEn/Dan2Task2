@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace Dan2Task2
         public Form1()
         {
             InitializeComponent();
+
+
+
+            this.Width -= 17;
+            PanelBody.AutoScroll = false;
+
+            foreach (var panel in PanelBody.Controls.OfType<Guna2Panel>())
+            {
+                panel.Height = PanelBody.Height;
+            }
+        }
+
+        private void PanelBody_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
