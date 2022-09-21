@@ -126,16 +126,16 @@ namespace Dan2Task2
                     if (ActionEncodingBox.Text == "Encode")
                     {
 
-                        EncodeTextBytes = Encoding.UTF8.GetBytes(GetTextEncodingTextBox.Text);
-                        ResultEncodingTextBox.Text = Convert.ToBase64String(EncodeTextBytes);
+                        EncodeTextBytes = Encoding.UTF8.GetBytes(GetTextEncodingTextBox.Text);     //переводим строку в байты 
+                        ResultEncodingTextBox.Text = Convert.ToBase64String(EncodeTextBytes);     //шифруем байтвую строку в Base64 и выводим 
 
                     }
                     else if (ActionEncodingBox.Text == "Decode")
                     {
 
 
-                        EncodeTextBytes = Convert.FromBase64String(GetTextEncodingTextBox.Text);
-                        ResultEncodingTextBox.Text = Encoding.UTF8.GetString(EncodeTextBytes);
+                        EncodeTextBytes = Convert.FromBase64String(GetTextEncodingTextBox.Text);  //расшифровуем с Base64 в строку и помещаем в переменную байт 
+                        ResultEncodingTextBox.Text = Encoding.UTF8.GetString(EncodeTextBytes);   //с переменной байт переводим в строку и выводим
                     }
                 }
                 else if (AlgoritmCodeBox.Text == "UrlEncode")
@@ -143,10 +143,12 @@ namespace Dan2Task2
                     if (ActionEncodingBox.Text == "Encode")
                     {
                         ResultEncodingTextBox.Text = WebUtility.UrlEncode(GetTextEncodingTextBox.Text);
+                        //зашифровуем текст в UrlEncode с входной строки и выводим 
                     }
                     else if (ActionEncodingBox.Text == "Decode")
                     {
                         ResultEncodingTextBox.Text = WebUtility.UrlDecode(GetTextEncodingTextBox.Text);
+                        //расшифровуем тест с UrlEncode и выводим
                     }
 
                 }
@@ -156,12 +158,16 @@ namespace Dan2Task2
                     if (ActionEncodingBox.Text == "Encode")
                     {
                         ResultEncodingTextBox.Text = WebUtility.UrlEncode(GetTextEncodingTextBox.Text);
+                        //зашифровуем текст в HtmlEncode с входной строки и выводим 
+
 
 
                     }
                     else if (ActionEncodingBox.Text == "Decode")
                     {
                         ResultEncodingTextBox.Text = WebUtility.UrlDecode(GetTextEncodingTextBox.Text);
+                        //расшифровуем тест с HtmlEncode и выводим
+
 
                     }
                 }
