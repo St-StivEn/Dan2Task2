@@ -61,7 +61,7 @@
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GetTextAESTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.GoAesButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -73,7 +73,7 @@
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ActionAesBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.EncodingPanel = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GoEncodingButton = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -87,7 +87,7 @@
             this.GetTextEncodingTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ActionBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ActionEncodingBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AlgoritmCodeBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -147,8 +147,8 @@
             this.DateTimeNowPanel.BorderRadius = 12;
             this.DateTimeNowPanel.BorderThickness = 2;
             this.DateTimeNowPanel.Controls.Add(this.DateTimeNowLabel);
-            this.DateTimeNowPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.DateTimeNowPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.DateTimeNowPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.DateTimeNowPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
             this.DateTimeNowPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.DateTimeNowPanel.Location = new System.Drawing.Point(871, 38);
             this.DateTimeNowPanel.Name = "DateTimeNowPanel";
@@ -514,7 +514,7 @@
             this.AESPanel.Controls.Add(this.guna2HtmlLabel11);
             this.AESPanel.Controls.Add(this.guna2GradientPanel11);
             this.AESPanel.Controls.Add(this.guna2GradientPanel10);
-            this.AESPanel.Controls.Add(this.guna2GradientButton2);
+            this.AESPanel.Controls.Add(this.GoAesButton);
             this.AESPanel.Controls.Add(this.guna2GradientPanel9);
             this.AESPanel.Controls.Add(this.guna2GradientPanel8);
             this.AESPanel.Controls.Add(this.guna2GradientPanel6);
@@ -695,7 +695,7 @@
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(164, 3);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(164, 5);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(162, 27);
             this.guna2HtmlLabel9.TabIndex = 2;
@@ -727,32 +727,32 @@
             this.GetTextAESTextBox.Size = new System.Drawing.Size(472, 274);
             this.GetTextAESTextBox.TabIndex = 0;
             // 
-            // guna2GradientButton2
+            // GoAesButton
             // 
-            this.guna2GradientButton2.Animated = true;
-            this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.BorderRadius = 8;
-            this.guna2GradientButton2.BorderThickness = 2;
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(9)))), ((int)(((byte)(121)))));
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.guna2GradientButton2.HoverState.FillColor = System.Drawing.Color.Fuchsia;
-            this.guna2GradientButton2.HoverState.FillColor2 = System.Drawing.Color.Black;
-            this.guna2GradientButton2.HoverState.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2GradientButton2.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(302, 132);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(210, 61);
-            this.guna2GradientButton2.TabIndex = 7;
-            this.guna2GradientButton2.Text = "Encoding";
-            this.guna2GradientButton2.UseTransparentBackground = true;
+            this.GoAesButton.Animated = true;
+            this.GoAesButton.BackColor = System.Drawing.Color.Transparent;
+            this.GoAesButton.BorderRadius = 8;
+            this.GoAesButton.BorderThickness = 2;
+            this.GoAesButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GoAesButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GoAesButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GoAesButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GoAesButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GoAesButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(9)))), ((int)(((byte)(121)))));
+            this.GoAesButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.GoAesButton.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.GoAesButton.ForeColor = System.Drawing.Color.White;
+            this.GoAesButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.GoAesButton.HoverState.FillColor = System.Drawing.Color.Fuchsia;
+            this.GoAesButton.HoverState.FillColor2 = System.Drawing.Color.Black;
+            this.GoAesButton.HoverState.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GoAesButton.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.GoAesButton.Location = new System.Drawing.Point(302, 132);
+            this.GoAesButton.Name = "GoAesButton";
+            this.GoAesButton.Size = new System.Drawing.Size(210, 61);
+            this.GoAesButton.TabIndex = 7;
+            this.GoAesButton.Text = "Encoding";
+            this.GoAesButton.UseTransparentBackground = true;
             // 
             // guna2GradientPanel9
             // 
@@ -936,7 +936,7 @@
             this.guna2GradientPanel7.BorderRadius = 12;
             this.guna2GradientPanel7.BorderThickness = 2;
             this.guna2GradientPanel7.Controls.Add(this.guna2HtmlLabel7);
-            this.guna2GradientPanel7.Controls.Add(this.guna2ComboBox2);
+            this.guna2GradientPanel7.Controls.Add(this.ActionAesBox);
             this.guna2GradientPanel7.FillColor = System.Drawing.Color.Fuchsia;
             this.guna2GradientPanel7.FillColor2 = System.Drawing.Color.Black;
             this.guna2GradientPanel7.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -957,30 +957,31 @@
             this.guna2HtmlLabel7.TabIndex = 1;
             this.guna2HtmlLabel7.Text = "Выбирите действие  :";
             // 
-            // guna2ComboBox2
+            // ActionAesBox
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.BorderRadius = 8;
-            this.guna2ComboBox2.BorderThickness = 2;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FillColor = System.Drawing.Color.Silver;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.ActionAesBox.BackColor = System.Drawing.Color.Transparent;
+            this.ActionAesBox.BorderColor = System.Drawing.Color.Black;
+            this.ActionAesBox.BorderRadius = 8;
+            this.ActionAesBox.BorderThickness = 2;
+            this.ActionAesBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ActionAesBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ActionAesBox.FillColor = System.Drawing.Color.Silver;
+            this.ActionAesBox.FocusedColor = System.Drawing.Color.Black;
+            this.ActionAesBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.ActionAesBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ActionAesBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ActionAesBox.ItemHeight = 30;
+            this.ActionAesBox.Items.AddRange(new object[] {
             "Encode",
             "Decode"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(290, 10);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guna2ComboBox2.Size = new System.Drawing.Size(194, 36);
-            this.guna2ComboBox2.StartIndex = 0;
-            this.guna2ComboBox2.TabIndex = 0;
-            this.guna2ComboBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ActionAesBox.Location = new System.Drawing.Point(290, 10);
+            this.ActionAesBox.Name = "ActionAesBox";
+            this.ActionAesBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ActionAesBox.Size = new System.Drawing.Size(194, 36);
+            this.ActionAesBox.StartIndex = 0;
+            this.ActionAesBox.TabIndex = 0;
+            this.ActionAesBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ActionAesBox.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox2_SelectedIndexChanged);
             // 
             // EncodingPanel
             // 
@@ -1207,7 +1208,7 @@
             this.guna2GradientPanel3.BorderRadius = 12;
             this.guna2GradientPanel3.BorderThickness = 2;
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GradientPanel3.Controls.Add(this.ActionBox);
+            this.guna2GradientPanel3.Controls.Add(this.ActionEncodingBox);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.Fuchsia;
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.Black;
             this.guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -1228,30 +1229,31 @@
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Выбирите действие  :";
             // 
-            // ActionBox
+            // ActionEncodingBox
             // 
-            this.ActionBox.BackColor = System.Drawing.Color.Transparent;
-            this.ActionBox.BorderColor = System.Drawing.Color.Black;
-            this.ActionBox.BorderRadius = 8;
-            this.ActionBox.BorderThickness = 2;
-            this.ActionBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ActionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ActionBox.FillColor = System.Drawing.Color.Silver;
-            this.ActionBox.FocusedColor = System.Drawing.Color.Black;
-            this.ActionBox.FocusedState.BorderColor = System.Drawing.Color.Black;
-            this.ActionBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ActionBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ActionBox.ItemHeight = 30;
-            this.ActionBox.Items.AddRange(new object[] {
+            this.ActionEncodingBox.BackColor = System.Drawing.Color.Transparent;
+            this.ActionEncodingBox.BorderColor = System.Drawing.Color.Black;
+            this.ActionEncodingBox.BorderRadius = 8;
+            this.ActionEncodingBox.BorderThickness = 2;
+            this.ActionEncodingBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ActionEncodingBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ActionEncodingBox.FillColor = System.Drawing.Color.Silver;
+            this.ActionEncodingBox.FocusedColor = System.Drawing.Color.Black;
+            this.ActionEncodingBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.ActionEncodingBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ActionEncodingBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ActionEncodingBox.ItemHeight = 30;
+            this.ActionEncodingBox.Items.AddRange(new object[] {
             "Encode",
             "Decode"});
-            this.ActionBox.Location = new System.Drawing.Point(386, 10);
-            this.ActionBox.Name = "ActionBox";
-            this.ActionBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ActionBox.Size = new System.Drawing.Size(194, 36);
-            this.ActionBox.StartIndex = 0;
-            this.ActionBox.TabIndex = 0;
-            this.ActionBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ActionEncodingBox.Location = new System.Drawing.Point(386, 10);
+            this.ActionEncodingBox.Name = "ActionEncodingBox";
+            this.ActionEncodingBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ActionEncodingBox.Size = new System.Drawing.Size(194, 36);
+            this.ActionEncodingBox.StartIndex = 0;
+            this.ActionEncodingBox.TabIndex = 0;
+            this.ActionEncodingBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ActionEncodingBox.SelectedIndexChanged += new System.EventHandler(this.ActionBox_SelectedIndexChanged);
             // 
             // guna2GradientPanel2
             // 
@@ -1411,7 +1413,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox AlgoritmCodeBox;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2ComboBox ActionBox;
+        private Guna.UI2.WinForms.Guna2ComboBox ActionEncodingBox;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private Guna.UI2.WinForms.Guna2TextBox GetTextEncodingTextBox;
@@ -1430,13 +1432,13 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox ActionAesBox;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2GradientButton GoAesButton;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;

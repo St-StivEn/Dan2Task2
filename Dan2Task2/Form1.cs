@@ -30,11 +30,17 @@ namespace Dan2Task2
             {
                 panel.Height = PanelBody.Height;
             }
+
+            
         }
 
         private void EncodingMenuButton_Click(object sender, EventArgs e)
         {
             EncodingPanel.SendToBack();
+            AlgoritmCodeBox.StartIndex = 0;
+            ActionEncodingBox.StartIndex = 0;
+            GetTextEncodingTextBox.Text = string.Empty;
+            ResultEncodingTextBox.Text = string.Empty;
         }
 
         private void AESMenuButton_Click(object sender, EventArgs e)
@@ -113,45 +119,77 @@ namespace Dan2Task2
         {
             byte[] EncodeTextBytes;
 
-            if(AlgoritmCodeBox.Text== "Base64")
+            try
             {
-                if(ActionBox.Text == "Encode")
+                if (AlgoritmCodeBox.Text == "Base64")
                 {
-                    EncodeTextBytes = Encoding.UTF8.GetBytes(GetTextEncodingTextBox.Text);
-                    ResultEncodingTextBox.Text = Convert.ToBase64String(EncodeTextBytes);
+                    if (ActionEncodingBox.Text == "Encode")
+                    {
+
+                        EncodeTextBytes = Encoding.UTF8.GetBytes(GetTextEncodingTextBox.Text);
+                        ResultEncodingTextBox.Text = Convert.ToBase64String(EncodeTextBytes);
+
+                    }
+                    else if (ActionEncodingBox.Text == "Decode")
+                    {
+
+
+                        EncodeTextBytes = Convert.FromBase64String(GetTextEncodingTextBox.Text);
+                        ResultEncodingTextBox.Text = Encoding.UTF8.GetString(EncodeTextBytes);
+                    }
+                }
+                else if (AlgoritmCodeBox.Text == "UrlEncode")
+                {
+                    if (ActionEncodingBox.Text == "Encode")
+                    {
+                        ResultEncodingTextBox.Text = WebUtility.UrlEncode(GetTextEncodingTextBox.Text);
+                    }
+                    else if (ActionEncodingBox.Text == "Decode")
+                    {
+                        ResultEncodingTextBox.Text = WebUtility.UrlDecode(GetTextEncodingTextBox.Text);
+                    }
 
                 }
-                else if(ActionBox.Text == "Decode")
+                else if (AlgoritmCodeBox.Text == "HtmlEncode")
                 {
-                    EncodeTextBytes = Convert.FromBase64String(GetTextEncodingTextBox.Text);
-                    ResultEncodingTextBox.Text = Encoding.UTF8.GetString(EncodeTextBytes);
+
+                    if (ActionEncodingBox.Text == "Encode")
+                    {
+                        ResultEncodingTextBox.Text = WebUtility.UrlEncode(GetTextEncodingTextBox.Text);
+
+
+                    }
+                    else if (ActionEncodingBox.Text == "Decode")
+                    {
+                        ResultEncodingTextBox.Text = WebUtility.UrlDecode(GetTextEncodingTextBox.Text);
+
+                    }
                 }
             }
-            else if (AlgoritmCodeBox.Text == "UrlEncode")
+            catch { }
+        }
+
+        private void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ActionAesBox.Text == "Encode")
             {
-                if (ActionBox.Text == "Encode")
-                {
-                
-
-                }
-                else if (ActionBox.Text == "Decode")
-                {
-                    
-                }
-
+                GoAesButton.Text = "Encoding";
             }
-            else if (AlgoritmCodeBox.Text == "HtmlEncode")
+            else if(ActionAesBox.Text == "Decode")
             {
+                GoAesButton.Text = "Decoding";
+            }
+        }
 
-                if (ActionBox.Text == "Encode")
-                {
-                    
-
-                }
-                else if (ActionBox.Text == "Decode")
-                {
-                    
-                }
+        private void ActionBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ActionEncodingBox.Text == "Encode")
+            {
+                GoEncodingButton.Text = "Encoding";
+            }
+            else if(ActionEncodingBox.Text == "Decode")
+            {
+                GoEncodingButton.Text = "Decoding";
             }
         }
     }
