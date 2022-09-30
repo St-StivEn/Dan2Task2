@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace Dan2Task2
 {
@@ -34,13 +35,36 @@ namespace Dan2Task2
             
         }
 
+        public static string AesEncrypt (string text , byte[] key, byte[] iv, int keysize , int blocksize , CipherMode cipher , PaddingMode padding)
+        {
+            AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
+            aes.BlockSize = blocksize;
+            aes.KeySize = keysize;
+            aes.Mode = cipher;
+            aes.Padding = padding;
+
+            byte[] src = Encoding.UTF8.GetBytes(text);
+            using (ICryptoTransform encrypt = aes.CreateEncryptor(key, iv))
+            {
+                byte[] dest = encrypt.TransformFinalBlock(src, 0, src.Length);
+                encrypt.Dispose();
+                return Convert.ToBase64String(dest);
+            }
+        }
+
+       
+
         private void EncodingMenuButton_Click(object sender, EventArgs e)
         {
-            EncodingPanel.SendToBack();
-            AlgoritmCodeBox.StartIndex = 0;
-            ActionEncodingBox.StartIndex = 0;
-            GetTextEncodingTextBox.Text = string.Empty;
-            ResultEncodingTextBox.Text = string.Empty;
+            try
+            {
+                EncodingPanel.SendToBack();
+                AlgoritmCodeBox.StartIndex = 0;
+                ActionEncodingBox.StartIndex = 0;
+                GetTextEncodingTextBox.Text = string.Empty;
+                ResultEncodingTextBox.Text = string.Empty;
+            }
+            catch { }
         }
 
         private void AESMenuButton_Click(object sender, EventArgs e)
@@ -50,7 +74,13 @@ namespace Dan2Task2
 
         private void HashingMenuButton_Click(object sender, EventArgs e)
         {
-            HashingPanel.SendToBack();
+            try
+            {
+                HashingPanel.SendToBack();
+                GetTextHashingTextBox.Text = string.Empty;
+                ResultHashingTextBox.Text = string.Empty;
+            }
+            catch { }
         }
 
         private void EncodingGetTextButton_Click(object sender, EventArgs e)
@@ -197,6 +227,29 @@ namespace Dan2Task2
             {
                 GoEncodingButton.Text = "Decoding";
             }
+        }
+        public static string ByteArrayToString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach (byte b in ba)
+                hex.AppendFormat("{0:x2}", b);
+            return hex.ToString();
+        }
+
+        private void GoHashingButton_Click(object sender, EventArgs e)
+        {
+            string text = GetTextHashingTextBox.Text;
+            byte[] bytes = Encoding.UTF8.GetBytes(text);
+            byte[] hashMD5 = new MD5CryptoServiceProvider().ComputeHash(bytes);
+            byte[] hashSha_1 = new SHA1CryptoServiceProvider().ComputeHash(bytes);
+            byte[] hashSha_256 = new SHA256CryptoServiceProvider().ComputeHash(bytes);
+            byte[] hashSha_384 = new SHA384CryptoServiceProvider().ComputeHash(bytes);
+            byte[] hashSha_512 = new SHA512CryptoServiceProvider().ComputeHash(bytes);
+
+
+            ResultHashingTextBox.Text += $"MD5 : {ByteArrayToString(hashMD5)} \r\nsha-1 : {ByteArrayToString(hashSha_1)} \r\nsha-256 : {ByteArrayToString(hashSha_256)} " +
+                $"\r\nsha-384 : {ByteArrayToString(hashSha_384)} \r\nsha-512 : {ByteArrayToString(hashSha_512)}" ;
+
         }
     }
 }

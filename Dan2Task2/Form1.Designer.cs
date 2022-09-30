@@ -40,7 +40,7 @@
             this.EncodingMenuButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.PanelBody = new Guna.UI2.WinForms.Guna2Panel();
             this.HashingPanel = new System.Windows.Forms.Panel();
-            this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.GoHashingButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel13 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.HashingSetTextButton = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -63,14 +63,14 @@
             this.GetTextAESTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.GoAesButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GenerationKeyButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.KeyAesTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.SazeKeyAesBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.AlgoritmAesBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ActionAesBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -296,7 +296,7 @@
             // HashingPanel
             // 
             this.HashingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.HashingPanel.Controls.Add(this.guna2GradientButton7);
+            this.HashingPanel.Controls.Add(this.GoHashingButton);
             this.HashingPanel.Controls.Add(this.guna2HtmlLabel14);
             this.HashingPanel.Controls.Add(this.guna2GradientPanel13);
             this.HashingPanel.Controls.Add(this.guna2GradientPanel12);
@@ -306,32 +306,33 @@
             this.HashingPanel.Size = new System.Drawing.Size(1047, 583);
             this.HashingPanel.TabIndex = 2;
             // 
-            // guna2GradientButton7
+            // GoHashingButton
             // 
-            this.guna2GradientButton7.Animated = true;
-            this.guna2GradientButton7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton7.BorderRadius = 8;
-            this.guna2GradientButton7.BorderThickness = 2;
-            this.guna2GradientButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton7.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(9)))), ((int)(((byte)(121)))));
-            this.guna2GradientButton7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.guna2GradientButton7.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.guna2GradientButton7.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton7.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.guna2GradientButton7.HoverState.FillColor = System.Drawing.Color.Fuchsia;
-            this.guna2GradientButton7.HoverState.FillColor2 = System.Drawing.Color.Black;
-            this.guna2GradientButton7.HoverState.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2GradientButton7.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton7.Location = new System.Drawing.Point(418, 27);
-            this.guna2GradientButton7.Name = "guna2GradientButton7";
-            this.guna2GradientButton7.Size = new System.Drawing.Size(210, 61);
-            this.guna2GradientButton7.TabIndex = 12;
-            this.guna2GradientButton7.Text = "Encoding";
-            this.guna2GradientButton7.UseTransparentBackground = true;
+            this.GoHashingButton.Animated = true;
+            this.GoHashingButton.BackColor = System.Drawing.Color.Transparent;
+            this.GoHashingButton.BorderRadius = 8;
+            this.GoHashingButton.BorderThickness = 2;
+            this.GoHashingButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GoHashingButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GoHashingButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GoHashingButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GoHashingButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GoHashingButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(9)))), ((int)(((byte)(121)))));
+            this.GoHashingButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.GoHashingButton.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.GoHashingButton.ForeColor = System.Drawing.Color.White;
+            this.GoHashingButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.GoHashingButton.HoverState.FillColor = System.Drawing.Color.Fuchsia;
+            this.GoHashingButton.HoverState.FillColor2 = System.Drawing.Color.Black;
+            this.GoHashingButton.HoverState.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GoHashingButton.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.GoHashingButton.Location = new System.Drawing.Point(418, 27);
+            this.GoHashingButton.Name = "GoHashingButton";
+            this.GoHashingButton.Size = new System.Drawing.Size(210, 61);
+            this.GoHashingButton.TabIndex = 12;
+            this.GoHashingButton.Text = "Get Hashes";
+            this.GoHashingButton.UseTransparentBackground = true;
+            this.GoHashingButton.Click += new System.EventHandler(this.GoHashingButton_Click);
             // 
             // guna2HtmlLabel14
             // 
@@ -411,9 +412,11 @@
             this.ResultHashingTextBox.PasswordChar = '\0';
             this.ResultHashingTextBox.PlaceholderText = "";
             this.ResultHashingTextBox.ReadOnly = true;
+            this.ResultHashingTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.ResultHashingTextBox.SelectedText = "";
             this.ResultHashingTextBox.Size = new System.Drawing.Size(473, 350);
             this.ResultHashingTextBox.TabIndex = 4;
+            this.ResultHashingTextBox.WordWrap = false;
             // 
             // guna2HtmlLabel13
             // 
@@ -760,8 +763,8 @@
             this.guna2GradientPanel9.BorderColor = System.Drawing.Color.Black;
             this.guna2GradientPanel9.BorderRadius = 12;
             this.guna2GradientPanel9.BorderThickness = 2;
-            this.guna2GradientPanel9.Controls.Add(this.guna2GradientButton1);
-            this.guna2GradientPanel9.Controls.Add(this.guna2TextBox1);
+            this.guna2GradientPanel9.Controls.Add(this.GenerationKeyButton);
+            this.guna2GradientPanel9.Controls.Add(this.KeyAesTextBox);
             this.guna2GradientPanel9.FillColor = System.Drawing.Color.Fuchsia;
             this.guna2GradientPanel9.FillColor2 = System.Drawing.Color.Black;
             this.guna2GradientPanel9.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -771,58 +774,58 @@
             this.guna2GradientPanel9.TabIndex = 6;
             this.guna2GradientPanel9.UseTransparentBackground = true;
             // 
-            // guna2GradientButton1
+            // GenerationKeyButton
             // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderRadius = 8;
-            this.guna2GradientButton1.BorderThickness = 2;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(9)))), ((int)(((byte)(121)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.Fuchsia;
-            this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.Black;
-            this.guna2GradientButton1.HoverState.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2GradientButton1.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(13, 67);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(473, 45);
-            this.guna2GradientButton1.TabIndex = 8;
-            this.guna2GradientButton1.Text = "key generation button";
+            this.GenerationKeyButton.Animated = true;
+            this.GenerationKeyButton.BackColor = System.Drawing.Color.Transparent;
+            this.GenerationKeyButton.BorderRadius = 8;
+            this.GenerationKeyButton.BorderThickness = 2;
+            this.GenerationKeyButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GenerationKeyButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GenerationKeyButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GenerationKeyButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GenerationKeyButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GenerationKeyButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(9)))), ((int)(((byte)(121)))));
+            this.GenerationKeyButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.GenerationKeyButton.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.GenerationKeyButton.ForeColor = System.Drawing.Color.White;
+            this.GenerationKeyButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.GenerationKeyButton.HoverState.FillColor = System.Drawing.Color.Fuchsia;
+            this.GenerationKeyButton.HoverState.FillColor2 = System.Drawing.Color.Black;
+            this.GenerationKeyButton.HoverState.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GenerationKeyButton.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.GenerationKeyButton.Location = new System.Drawing.Point(13, 67);
+            this.GenerationKeyButton.Name = "GenerationKeyButton";
+            this.GenerationKeyButton.Size = new System.Drawing.Size(473, 45);
+            this.GenerationKeyButton.TabIndex = 8;
+            this.GenerationKeyButton.Text = "key generation button";
             // 
-            // guna2TextBox1
+            // KeyAesTextBox
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 12;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Crimson;
-            this.guna2TextBox1.Location = new System.Drawing.Point(10, 8);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.PlaceholderText = "Введите ключ";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(478, 41);
-            this.guna2TextBox1.TabIndex = 7;
-            this.guna2TextBox1.Tag = "";
+            this.KeyAesTextBox.BorderColor = System.Drawing.Color.Black;
+            this.KeyAesTextBox.BorderRadius = 12;
+            this.KeyAesTextBox.BorderThickness = 2;
+            this.KeyAesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.KeyAesTextBox.DefaultText = "";
+            this.KeyAesTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.KeyAesTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.KeyAesTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.KeyAesTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.KeyAesTextBox.FillColor = System.Drawing.Color.Silver;
+            this.KeyAesTextBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.KeyAesTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.KeyAesTextBox.ForeColor = System.Drawing.Color.Black;
+            this.KeyAesTextBox.HoverState.BorderColor = System.Drawing.Color.Crimson;
+            this.KeyAesTextBox.Location = new System.Drawing.Point(10, 8);
+            this.KeyAesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyAesTextBox.Name = "KeyAesTextBox";
+            this.KeyAesTextBox.PasswordChar = '\0';
+            this.KeyAesTextBox.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.KeyAesTextBox.PlaceholderText = "Введите ключ";
+            this.KeyAesTextBox.SelectedText = "";
+            this.KeyAesTextBox.Size = new System.Drawing.Size(478, 41);
+            this.KeyAesTextBox.TabIndex = 7;
+            this.KeyAesTextBox.Tag = "";
             // 
             // guna2GradientPanel8
             // 
@@ -831,7 +834,7 @@
             this.guna2GradientPanel8.BorderRadius = 12;
             this.guna2GradientPanel8.BorderThickness = 2;
             this.guna2GradientPanel8.Controls.Add(this.guna2HtmlLabel8);
-            this.guna2GradientPanel8.Controls.Add(this.guna2ComboBox3);
+            this.guna2GradientPanel8.Controls.Add(this.SazeKeyAesBox);
             this.guna2GradientPanel8.FillColor = System.Drawing.Color.Fuchsia;
             this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.Black;
             this.guna2GradientPanel8.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -852,29 +855,29 @@
             this.guna2HtmlLabel8.TabIndex = 1;
             this.guna2HtmlLabel8.Text = "Выбирите размер ключа  :";
             // 
-            // guna2ComboBox3
+            // SazeKeyAesBox
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox3.BorderRadius = 8;
-            this.guna2ComboBox3.BorderThickness = 2;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FillColor = System.Drawing.Color.Silver;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.Black;
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Items.AddRange(new object[] {
+            this.SazeKeyAesBox.BackColor = System.Drawing.Color.Transparent;
+            this.SazeKeyAesBox.BorderColor = System.Drawing.Color.Black;
+            this.SazeKeyAesBox.BorderRadius = 8;
+            this.SazeKeyAesBox.BorderThickness = 2;
+            this.SazeKeyAesBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.SazeKeyAesBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SazeKeyAesBox.FillColor = System.Drawing.Color.Silver;
+            this.SazeKeyAesBox.FocusedColor = System.Drawing.Color.Black;
+            this.SazeKeyAesBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.SazeKeyAesBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SazeKeyAesBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.SazeKeyAesBox.ItemHeight = 30;
+            this.SazeKeyAesBox.Items.AddRange(new object[] {
             "128"});
-            this.guna2ComboBox3.Location = new System.Drawing.Point(290, 9);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guna2ComboBox3.Size = new System.Drawing.Size(194, 36);
-            this.guna2ComboBox3.StartIndex = 0;
-            this.guna2ComboBox3.TabIndex = 0;
-            this.guna2ComboBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SazeKeyAesBox.Location = new System.Drawing.Point(290, 9);
+            this.SazeKeyAesBox.Name = "SazeKeyAesBox";
+            this.SazeKeyAesBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SazeKeyAesBox.Size = new System.Drawing.Size(194, 36);
+            this.SazeKeyAesBox.StartIndex = 0;
+            this.SazeKeyAesBox.TabIndex = 0;
+            this.SazeKeyAesBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2GradientPanel6
             // 
@@ -883,7 +886,7 @@
             this.guna2GradientPanel6.BorderRadius = 12;
             this.guna2GradientPanel6.BorderThickness = 2;
             this.guna2GradientPanel6.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2GradientPanel6.Controls.Add(this.guna2ComboBox1);
+            this.guna2GradientPanel6.Controls.Add(this.AlgoritmAesBox);
             this.guna2GradientPanel6.FillColor = System.Drawing.Color.Fuchsia;
             this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.Black;
             this.guna2GradientPanel6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -904,30 +907,30 @@
             this.guna2HtmlLabel6.TabIndex = 1;
             this.guna2HtmlLabel6.Text = "Выбирите алгоритм  :";
             // 
-            // guna2ComboBox1
+            // AlgoritmAesBox
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.BorderRadius = 8;
-            this.guna2ComboBox1.BorderThickness = 2;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.Silver;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.AlgoritmAesBox.BackColor = System.Drawing.Color.Transparent;
+            this.AlgoritmAesBox.BorderColor = System.Drawing.Color.Black;
+            this.AlgoritmAesBox.BorderRadius = 8;
+            this.AlgoritmAesBox.BorderThickness = 2;
+            this.AlgoritmAesBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.AlgoritmAesBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AlgoritmAesBox.FillColor = System.Drawing.Color.Silver;
+            this.AlgoritmAesBox.FocusedColor = System.Drawing.Color.Black;
+            this.AlgoritmAesBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.AlgoritmAesBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AlgoritmAesBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.AlgoritmAesBox.ItemHeight = 30;
+            this.AlgoritmAesBox.Items.AddRange(new object[] {
             "AES-ECB",
             "AES-CBC"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(292, 10);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(194, 36);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 0;
-            this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AlgoritmAesBox.Location = new System.Drawing.Point(292, 10);
+            this.AlgoritmAesBox.Name = "AlgoritmAesBox";
+            this.AlgoritmAesBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.AlgoritmAesBox.Size = new System.Drawing.Size(194, 36);
+            this.AlgoritmAesBox.StartIndex = 0;
+            this.AlgoritmAesBox.TabIndex = 0;
+            this.AlgoritmAesBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2GradientPanel7
             // 
@@ -1429,18 +1432,18 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel DateTimeNowLabel;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox AlgoritmAesBox;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2ComboBox ActionAesBox;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox KeyAesTextBox;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox SazeKeyAesBox;
         private Guna.UI2.WinForms.Guna2GradientButton GoAesButton;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
+        private Guna.UI2.WinForms.Guna2GradientButton GenerationKeyButton;
+        private Guna.UI2.WinForms.Guna2GradientButton GoHashingButton;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel13;
         private Guna.UI2.WinForms.Guna2GradientButton HashingSetTextButton;
