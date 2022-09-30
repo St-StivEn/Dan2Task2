@@ -52,7 +52,22 @@ namespace Dan2Task2
             }
         }
 
-       
+        public static string AesDecrypt(string text, byte[] key, byte[] iv, int keysize, int blocksize, CipherMode cipher, PaddingMode padding)
+        {
+            AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
+            aes.BlockSize = blocksize;
+            aes.KeySize = keysize;
+            aes.Mode = cipher;
+            aes.Padding = padding;
+
+            byte[] src = Convert.FromBase64String(text);
+            using (ICryptoTransform encrypt = aes.CreateEncryptor(key, iv))
+            {
+                byte[] dest = encrypt.TransformFinalBlock(src, 0, src.Length);
+                encrypt.Dispose();
+                return Encoding.UTF8.GetString(dest);
+            }
+        }
 
         private void EncodingMenuButton_Click(object sender, EventArgs e)
         {
