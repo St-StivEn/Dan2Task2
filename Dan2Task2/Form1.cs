@@ -266,5 +266,28 @@ namespace Dan2Task2
                 $"\r\nsha-384 : {ByteArrayToString(hashSha_384)} \r\nsha-512 : {ByteArrayToString(hashSha_512)}" ;
 
         }
+
+        private void GoAesButton_Click(object sender, EventArgs e)
+        {
+            string text = GetTextAESTextBox.Text;
+
+        }
+
+        private void GenerationKeyButton_Click(object sender, EventArgs e)
+        {
+           Random random = new Random();
+
+            int keyLenght = 0;
+            if (SizeKeyAesBox.Text == "128")
+                keyLenght = 128;
+
+            byte[] key = new byte[keyLenght];
+
+            random.NextBytes(key);
+
+            KeyAesTextBox.Text = Convert.ToBase64String(key);
+           
+
+        }
     }
 }

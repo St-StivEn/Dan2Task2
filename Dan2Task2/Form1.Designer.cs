@@ -67,7 +67,7 @@
             this.KeyAesTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.SazeKeyAesBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.SizeKeyAesBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AlgoritmAesBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -756,6 +756,7 @@
             this.GoAesButton.TabIndex = 7;
             this.GoAesButton.Text = "Encoding";
             this.GoAesButton.UseTransparentBackground = true;
+            this.GoAesButton.Click += new System.EventHandler(this.GoAesButton_Click);
             // 
             // guna2GradientPanel9
             // 
@@ -799,6 +800,7 @@
             this.GenerationKeyButton.Size = new System.Drawing.Size(473, 45);
             this.GenerationKeyButton.TabIndex = 8;
             this.GenerationKeyButton.Text = "key generation button";
+            this.GenerationKeyButton.Click += new System.EventHandler(this.GenerationKeyButton_Click);
             // 
             // KeyAesTextBox
             // 
@@ -834,7 +836,7 @@
             this.guna2GradientPanel8.BorderRadius = 12;
             this.guna2GradientPanel8.BorderThickness = 2;
             this.guna2GradientPanel8.Controls.Add(this.guna2HtmlLabel8);
-            this.guna2GradientPanel8.Controls.Add(this.SazeKeyAesBox);
+            this.guna2GradientPanel8.Controls.Add(this.SizeKeyAesBox);
             this.guna2GradientPanel8.FillColor = System.Drawing.Color.Fuchsia;
             this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.Black;
             this.guna2GradientPanel8.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -855,29 +857,29 @@
             this.guna2HtmlLabel8.TabIndex = 1;
             this.guna2HtmlLabel8.Text = "Выбирите размер ключа  :";
             // 
-            // SazeKeyAesBox
+            // SizeKeyAesBox
             // 
-            this.SazeKeyAesBox.BackColor = System.Drawing.Color.Transparent;
-            this.SazeKeyAesBox.BorderColor = System.Drawing.Color.Black;
-            this.SazeKeyAesBox.BorderRadius = 8;
-            this.SazeKeyAesBox.BorderThickness = 2;
-            this.SazeKeyAesBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.SazeKeyAesBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SazeKeyAesBox.FillColor = System.Drawing.Color.Silver;
-            this.SazeKeyAesBox.FocusedColor = System.Drawing.Color.Black;
-            this.SazeKeyAesBox.FocusedState.BorderColor = System.Drawing.Color.Black;
-            this.SazeKeyAesBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SazeKeyAesBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.SazeKeyAesBox.ItemHeight = 30;
-            this.SazeKeyAesBox.Items.AddRange(new object[] {
+            this.SizeKeyAesBox.BackColor = System.Drawing.Color.Transparent;
+            this.SizeKeyAesBox.BorderColor = System.Drawing.Color.Black;
+            this.SizeKeyAesBox.BorderRadius = 8;
+            this.SizeKeyAesBox.BorderThickness = 2;
+            this.SizeKeyAesBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.SizeKeyAesBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SizeKeyAesBox.FillColor = System.Drawing.Color.Silver;
+            this.SizeKeyAesBox.FocusedColor = System.Drawing.Color.Black;
+            this.SizeKeyAesBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.SizeKeyAesBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SizeKeyAesBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.SizeKeyAesBox.ItemHeight = 30;
+            this.SizeKeyAesBox.Items.AddRange(new object[] {
             "128"});
-            this.SazeKeyAesBox.Location = new System.Drawing.Point(290, 9);
-            this.SazeKeyAesBox.Name = "SazeKeyAesBox";
-            this.SazeKeyAesBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SazeKeyAesBox.Size = new System.Drawing.Size(194, 36);
-            this.SazeKeyAesBox.StartIndex = 0;
-            this.SazeKeyAesBox.TabIndex = 0;
-            this.SazeKeyAesBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SizeKeyAesBox.Location = new System.Drawing.Point(290, 9);
+            this.SizeKeyAesBox.Name = "SizeKeyAesBox";
+            this.SizeKeyAesBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SizeKeyAesBox.Size = new System.Drawing.Size(194, 36);
+            this.SizeKeyAesBox.StartIndex = 0;
+            this.SizeKeyAesBox.TabIndex = 0;
+            this.SizeKeyAesBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2GradientPanel6
             // 
@@ -1440,7 +1442,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2ComboBox SazeKeyAesBox;
+        private Guna.UI2.WinForms.Guna2ComboBox SizeKeyAesBox;
         private Guna.UI2.WinForms.Guna2GradientButton GoAesButton;
         private Guna.UI2.WinForms.Guna2GradientButton GenerationKeyButton;
         private Guna.UI2.WinForms.Guna2GradientButton GoHashingButton;
