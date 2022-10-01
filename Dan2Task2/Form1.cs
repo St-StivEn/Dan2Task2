@@ -84,7 +84,17 @@ namespace Dan2Task2
 
         private void AESMenuButton_Click(object sender, EventArgs e)
         {
-            AESPanel.SendToBack();
+            try
+            {
+                AESPanel.SendToBack();
+                ActionAesBox.StartIndex = 0;
+                SizeKeyAesBox.StartIndex = 0;
+                AlgoritmAesBox.StartIndex = 0;
+                KeyAesTextBox.Text = string.Empty;
+                GetTextAESTextBox.Text = string.Empty;
+                ResultAESTextBox.Text = string.Empty;
+            }
+            catch { }
         }
 
         private void HashingMenuButton_Click(object sender, EventArgs e)
