@@ -37,6 +37,8 @@ namespace Dan2Task2
 
         public static string Encrypt(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.CBC, PaddingMode padding = PaddingMode.PKCS7)
         {
+
+
             AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
             aes.BlockSize = blocksize;
             aes.KeySize = keysize;
@@ -50,6 +52,7 @@ namespace Dan2Task2
                 encrypt.Dispose();
                 return Convert.ToBase64String(dest);
             }
+
         }
 
         public static string Decrypt(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.CBC, PaddingMode padding = PaddingMode.PKCS7)
@@ -279,48 +282,56 @@ namespace Dan2Task2
 
         private void GoAesButton_Click(object sender, EventArgs e)
         {
-            string text = GetTextAESTextBox.Text;                             //в переменную текст помещаем тест введеный пользователем 
-            byte[] key = Convert.FromBase64String(KeyAesTextBox.Text);        // в переменную кей помещаем сгенерировавшийся ключ с текст бокса 
-
-            int keysize = 128;       //указываем длину ключа 
-            int blocksize = 128;      //указываем длину блока 
-
-            CipherMode cipher = CipherMode.CBC;          //указываем алгоритм шифрования 
-            PaddingMode padding = PaddingMode.PKCS7;     //не знаю что это но указать нужно 
-
-            if(SizeKeyAesBox.Text == "128")
+            try
             {
-                keysize = 128;
-                blocksize = 128;
-            }
+                string text = GetTextAESTextBox.Text;                             //в переменную текст помещаем тест введеный пользователем 
+                byte[] key = Convert.FromBase64String(KeyAesTextBox.Text);        // в переменную кей помещаем сгенерировавшийся ключ с текст бокса 
 
-            if(AlgoritmAesBox.Text == "AES-ECB")
-            {
-                cipher = CipherMode.ECB;
-            }
-            else if(AlgoritmAesBox.Text == "AES-CBC")
-            {
-                cipher = CipherMode.CBC;
-            }
+                int keysize = 128;       //указываем длину ключа 
+                int blocksize = 128;      //указываем длину блока 
+
+                CipherMode cipher = CipherMode.CBC;          //указываем алгоритм шифрования 
+                PaddingMode padding = PaddingMode.PKCS7;     //не знаю что это но указать нужно 
+
+                if (SizeKeyAesBox.Text == "128")
+                {
+                    keysize = 128;
+                    blocksize = 128;
+                }
+
+                if (AlgoritmAesBox.Text == "AES-ECB")
+                {
+                    cipher = CipherMode.ECB;
+                }
+                else if (AlgoritmAesBox.Text == "AES-CBC")
+                {
+                    cipher = CipherMode.CBC;
+                }
 
 
-            if(ActionAesBox.Text == "Encode")
-            {
-                ResultAESTextBox.Text = Encrypt(text, key, key, keysize, blocksize, cipher, padding).ToString(); //вызываем метод по шифровке и помещаем результат в текст бокс 
+                if (ActionAesBox.Text == "Encode")
+                {
+                    ResultAESTextBox.Text = Encrypt(text, key, key, keysize, blocksize, cipher, padding).ToString(); //вызываем метод по шифровке и помещаем результат в текст бокс 
+                }
+                else if (ActionAesBox.Text == "Decode")
+                {
+                    ResultAESTextBox.Text = Decrypt(text, key, key, keysize, blocksize, cipher, padding).ToString(); //вызываем метод по дешифровке и помещаем результат в текст бокс 
+                }
             }
-            else if(ActionAesBox.Text == "Decode")
-            {
-                ResultAESTextBox.Text = Decrypt(text, key, key, keysize, blocksize, cipher, padding).ToString(); //вызываем метод по дешифровке и помещаем результат в текст бокс 
-            }
+            catch { }
         }
 
         private void GenerationKeyButton_Click(object sender, EventArgs e)
         {
-            byte[] key = new byte[128 / 8];       //создаем переменную ключ дленой 128\8
+            try
+            {
+                byte[] key = new byte[128 / 8];       //создаем переменную ключ дленой 128\8
 
-            new Random().NextBytes(key);       //заполняем ее рандомными символами 
+                new Random().NextBytes(key);       //заполняем ее рандомными символами 
 
-            KeyAesTextBox.Text = Convert.ToBase64String(key); // вывводм получившийся ключ в текст бокс
+                KeyAesTextBox.Text = Convert.ToBase64String(key); // вывводм получившийся ключ в текст бокс
+            }
+            catch { }
            
 
         }
