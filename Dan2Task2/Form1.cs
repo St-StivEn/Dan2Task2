@@ -269,14 +269,14 @@ namespace Dan2Task2
 
         private void GoAesButton_Click(object sender, EventArgs e)
         {
-            string text = GetTextAESTextBox.Text;
-            byte[] key = Convert.FromBase64String(KeyAesTextBox.Text);
+            string text = GetTextAESTextBox.Text;                             //в переменную текст помещаем тест введеный пользователем 
+            byte[] key = Convert.FromBase64String(KeyAesTextBox.Text);        // в переменную кей помещаем сгенерировавшийся ключ с текст бокса 
 
-            int keysize = 128;
-            int blocksize = 128;
+            int keysize = 128;       //указываем длину ключа 
+            int blocksize = 128;      //указываем длину блока 
 
-            CipherMode cipher = CipherMode.CBC;
-            PaddingMode padding = PaddingMode.PKCS7;
+            CipherMode cipher = CipherMode.CBC;          //указываем алгоритм шифрования 
+            PaddingMode padding = PaddingMode.PKCS7;     //не знаю что это но указать нужно 
 
             if(SizeKeyAesBox.Text == "128")
             {
@@ -296,11 +296,11 @@ namespace Dan2Task2
 
             if(ActionAesBox.Text == "Encode")
             {
-                ResultAESTextBox.Text = Encrypt(text, key, key, keysize, blocksize, cipher, padding).ToString();
+                ResultAESTextBox.Text = Encrypt(text, key, key, keysize, blocksize, cipher, padding).ToString(); //вызываем метод по шифровке и помещаем результат в текст бокс 
             }
             else if(ActionAesBox.Text == "Decode")
             {
-                ResultAESTextBox.Text = Decrypt(text, key, key, keysize, blocksize, cipher, padding).ToString();
+                ResultAESTextBox.Text = Decrypt(text, key, key, keysize, blocksize, cipher, padding).ToString(); //вызываем метод по дешифровке и помещаем результат в текст бокс 
             }
         }
 
