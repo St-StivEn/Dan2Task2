@@ -333,6 +333,7 @@ namespace Dan2Task2
             }
             catch { }
            
+            //первый релиз софта v1.0.0
 
         }
     }
