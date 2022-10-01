@@ -306,11 +306,11 @@ namespace Dan2Task2
 
         private void GenerationKeyButton_Click(object sender, EventArgs e)
         {
-            byte[] key = new byte[128 / 8];
+            byte[] key = new byte[128 / 8];       //создаем переменную ключ дленой 128\8
 
-            new Random().NextBytes(key);
+            new Random().NextBytes(key);       //заполняем ее рандомными символами 
 
-            KeyAesTextBox.Text = Convert.ToBase64String(key);
+            KeyAesTextBox.Text = Convert.ToBase64String(key); // вывводм получившийся ключ в текст бокс
            
 
         }
