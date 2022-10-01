@@ -35,7 +35,7 @@ namespace Dan2Task2
             
         }
 
-        public static string AesEncrypt (string text , byte[] key, byte[] iv, int keysize , int blocksize , CipherMode cipher , PaddingMode padding)
+        public static string Encrypt(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.CBC, PaddingMode padding = PaddingMode.PKCS7)
         {
             AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
             aes.BlockSize = blocksize;
@@ -52,7 +52,7 @@ namespace Dan2Task2
             }
         }
 
-        public static string AesDecrypt(string text, byte[] key, byte[] iv, int keysize, int blocksize, CipherMode cipher, PaddingMode padding)
+        public static string Decrypt(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.CBC, PaddingMode padding = PaddingMode.PKCS7)
         {
             AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
             aes.BlockSize = blocksize;
@@ -61,10 +61,10 @@ namespace Dan2Task2
             aes.Padding = padding;
 
             byte[] src = Convert.FromBase64String(text);
-            using (ICryptoTransform encrypt = aes.CreateEncryptor(key, iv))
+            using (ICryptoTransform decrypt = aes.CreateDecryptor(key, iv))
             {
-                byte[] dest = encrypt.TransformFinalBlock(src, 0, src.Length);
-                encrypt.Dispose();
+                byte[] dest = decrypt.TransformFinalBlock(src, 0, src.Length);
+                decrypt.Dispose();
                 return Encoding.UTF8.GetString(dest);
             }
         }
@@ -262,7 +262,7 @@ namespace Dan2Task2
             byte[] hashSha_512 = new SHA512CryptoServiceProvider().ComputeHash(bytes);
 
 
-            ResultHashingTextBox.Text += $"MD5 : {ByteArrayToString(hashMD5)} \r\nsha-1 : {ByteArrayToString(hashSha_1)} \r\nsha-256 : {ByteArrayToString(hashSha_256)} " +
+            ResultHashingTextBox.Text = $"MD5 : {ByteArrayToString(hashMD5)} \r\nsha-1 : {ByteArrayToString(hashSha_1)} \r\nsha-256 : {ByteArrayToString(hashSha_256)} " +
                 $"\r\nsha-384 : {ByteArrayToString(hashSha_384)} \r\nsha-512 : {ByteArrayToString(hashSha_512)}" ;
 
         }
@@ -270,20 +270,45 @@ namespace Dan2Task2
         private void GoAesButton_Click(object sender, EventArgs e)
         {
             string text = GetTextAESTextBox.Text;
+            byte[] key = Convert.FromBase64String(KeyAesTextBox.Text);
 
+            int keysize = 128;
+            int blocksize = 128;
+
+            CipherMode cipher = CipherMode.CBC;
+            PaddingMode padding = PaddingMode.PKCS7;
+
+            if(SizeKeyAesBox.Text == "128")
+            {
+                keysize = 128;
+                blocksize = 128;
+            }
+
+            if(AlgoritmAesBox.Text == "AES-ECB")
+            {
+                cipher = CipherMode.ECB;
+            }
+            else if(AlgoritmAesBox.Text == "AES-CBC")
+            {
+                cipher = CipherMode.CBC;
+            }
+
+
+            if(ActionAesBox.Text == "Encode")
+            {
+                ResultAESTextBox.Text = Encrypt(text, key, key, keysize, blocksize, cipher, padding).ToString();
+            }
+            else if(ActionAesBox.Text == "Decode")
+            {
+                ResultAESTextBox.Text = Decrypt(text, key, key, keysize, blocksize, cipher, padding).ToString();
+            }
         }
 
         private void GenerationKeyButton_Click(object sender, EventArgs e)
         {
-           Random random = new Random();
+            byte[] key = new byte[128 / 8];
 
-            int keyLenght = 0;
-            if (SizeKeyAesBox.Text == "128")
-                keyLenght = 128;
-
-            byte[] key = new byte[keyLenght];
-
-            random.NextBytes(key);
+            new Random().NextBytes(key);
 
             KeyAesTextBox.Text = Convert.ToBase64String(key);
            
